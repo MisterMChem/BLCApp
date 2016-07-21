@@ -16,8 +16,8 @@ function userSignedIn(user) {
     	if (data){
     	
 	    	//photo
-	    	if (data.photourl) {
-	    		photo = data.photourl;
+	    	if (data.photo) {
+	    		photo = data.photo;
 	    	} else if (user.photoURL) {
 	    		photo = user.photoURL;
 	    	}
