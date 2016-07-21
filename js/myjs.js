@@ -5,11 +5,11 @@ $( document ).ready(function() {
 function userSignedIn(user) {
 	$("#loginContainer").hide();
 	$("#mainContainer").show();
+	console.log("signed in");
 
 }
 
 function login() {
-	console.log("test");
 	var provider = new firebase.auth.GoogleAuthProvider();
 	var user = firebase.auth().currentUser;
 
@@ -26,6 +26,7 @@ function login() {
 			var token = result.credential.accessToken;
 			// The signed-in user info.
 			var user = result.user;
+			console.log(user);
 			userSignedIn(user);
 			// ...
 		}).catch(function(error) {
