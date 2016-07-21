@@ -143,5 +143,10 @@ function submitProfile() {
     	website: $("#website").val(),
     	mobile: $("#mobile").val(),
     	loc: $("#location").val()
+	}).then(function(result) {
+		$("#successAlert").show();
+		setTimeout(function() {
+    		$(".alert").hide();
+		}, 3000);
 	});
 }
