@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	login();
+	checkLogin();
 });
 
 function userSignedIn(user) {
@@ -7,7 +7,18 @@ function userSignedIn(user) {
 	$("#mainContainer").show();
 	console.log("signed in");
 
-}
+};
+
+function checkLogin() {
+	var provider = new firebase.auth.GoogleAuthProvider();
+	var user = firebase.auth().currentUser;
+	if (user) {
+		userSignedIn(user);
+	} else {
+
+	}
+
+};
 
 function login() {
 	var provider = new firebase.auth.GoogleAuthProvider();
@@ -42,4 +53,4 @@ function login() {
 
 	}
 
-}
+};
