@@ -134,7 +134,7 @@ function login() {
 
 function submitProfile() {
 	firebase.database().ref('Users/' + uid).set({
-		photo: photourl,
+		photo: photo,
     	fullname: fullname,
     	email: email,
     	twitter: twitter,
