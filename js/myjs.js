@@ -13,6 +13,7 @@ function userSignedIn(user) {
     firebase.database().ref('Users/' + uid).once('value').then(function(snapshot) {
     	var data = snapshot.val();
     	if (data){
+    	
 	    	//photo
 	    	if (data.photourl) {
 	    		photo = data.photourl;
@@ -54,6 +55,16 @@ function userSignedIn(user) {
 	    	//website
 	    	if (data.website) {
 	    		website = data.website;
+	    	}
+		} else {
+			if (user.photoURL) {
+	    		photo = user.photoURL;
+	    	}
+	    	if (user.displayName) {
+	    		fullname = user.displayName;
+	    	}
+	    	if (user.email) {
+	    		email = user.email;
 	    	}
 		}
 	});
