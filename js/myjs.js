@@ -57,10 +57,10 @@ function userSignedIn(user) {
 	    		website = data.website;
 	    	}
 		} else {
-			console.log(user.photoURL);
 			if (user.photoURL) {
 	    		photo = user.photoURL;
 	    	}
+	    	console.log(user.displayName);
 	    	if (user.displayName) {
 	    		fullname = user.displayName;
 	    	}
