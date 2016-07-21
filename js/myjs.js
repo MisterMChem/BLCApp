@@ -12,50 +12,50 @@ function userSignedIn(user) {
 
     firebase.database().ref('Users/' + uid).once('value').then(function(snapshot) {
     	var data = snapshot.val();
-    	//photo
-    	if (data.photourl) {
-    		photo = data.photourl;
-    	} else if (user.photoURL) {
-    		photo = user.photoURL;
-    	}
-    	//name
-    	if (data.fullname) {
-    		fullname = data.fullname; 
-    	} else if (user.displayName) {
-    		fullname = user.displayName;
-    	}
-    	//email
-    	if (data.email) {
-    		email = data.email;
-    	} else if (user.email) {
-    		email = user.email;
-    	}
-    	//twitter
-    	if (data.twitter) {
-    		twitter = data.twitter;
-    	}
-    	//linkedin
-    	if (data.linkedin) {
-    		linkedin = data.linkedin;
-    	}
-    	//facebook
-    	if (data.facebook) {
-    		facebook = data.facebook;
-    	}
-    	//mobile
-    	if (data.mobile) {
-    		mobile = data.mobile;
-    	}
-    	//location
-    	if (data.loc) {
-    		loc = data.loc;
-    	}
-    	//website
-    	if (data.website) {
-    		website = data.website;
-    	}
-
-  		var username = snapshot.val().username;
+    	if (data){
+	    	//photo
+	    	if (data.photourl) {
+	    		photo = data.photourl;
+	    	} else if (user.photoURL) {
+	    		photo = user.photoURL;
+	    	}
+	    	//name
+	    	if (data.fullname) {
+	    		fullname = data.fullname; 
+	    	} else if (user.displayName) {
+	    		fullname = user.displayName;
+	    	}
+	    	//email
+	    	if (data.email) {
+	    		email = data.email;
+	    	} else if (user.email) {
+	    		email = user.email;
+	    	}
+	    	//twitter
+	    	if (data.twitter) {
+	    		twitter = data.twitter;
+	    	}
+	    	//linkedin
+	    	if (data.linkedin) {
+	    		linkedin = data.linkedin;
+	    	}
+	    	//facebook
+	    	if (data.facebook) {
+	    		facebook = data.facebook;
+	    	}
+	    	//mobile
+	    	if (data.mobile) {
+	    		mobile = data.mobile;
+	    	}
+	    	//location
+	    	if (data.loc) {
+	    		loc = data.loc;
+	    	}
+	    	//website
+	    	if (data.website) {
+	    		website = data.website;
+	    	}
+		}
 	});
 
 	$("#loginContainer").hide();
