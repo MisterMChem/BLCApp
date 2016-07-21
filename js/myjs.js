@@ -57,6 +57,7 @@ function userSignedIn(user) {
 	    		website = data.website;
 	    	}
 		} else {
+			console.log(user);
 			if (user.photoURL) {
 	    		photo = user.photoURL;
 	    	}
@@ -71,7 +72,6 @@ function userSignedIn(user) {
 
 	$("#loginContainer").hide();
 	$("#mainContainer").show();
-	console.log("signed in");
 	$("#profileImg").attr("src", photo);
 	$("#name").val(fullname);
 	$("#location").val(loc);
@@ -101,7 +101,6 @@ function login() {
 	var user = firebase.auth().currentUser;
 
 	if (user) {
-		console.log("signed in");
   		// User is signed in.
   		userSignedIn(user);
 	} else {
