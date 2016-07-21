@@ -57,7 +57,7 @@ function userSignedIn(user) {
 	    		website = data.website;
 	    	}
 		} else {
-			console.log(user);
+			console.log(user.photoURL);
 			if (user.photoURL) {
 	    		photo = user.photoURL;
 	    	}
@@ -112,7 +112,6 @@ function login() {
 			var token = result.credential.accessToken;
 			// The signed-in user info.
 			var user = result.user;
-			console.log(user);
 			userSignedIn(user);
 			// ...
 		}).catch(function(error) {
