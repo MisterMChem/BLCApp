@@ -50,7 +50,7 @@
         <div class="col-lg-offset-2 col-lg-8">
           <h2>Welcome to Netwerk!</h2><br>
           <p>Connect with your fellow attendees!</p>
-          <button type="button" class="btn btn-primary" onclick="login()"><i class="fa fa-google"></i> Sign in With Google</button>
+          <button type="button" class="btn btn-primary" onclick="login();"><i class="fa fa-google"></i> Sign in With Google</button>
         </div>
       </div>
 
@@ -58,7 +58,52 @@
     <div class="container" id="mainContainer">
       <div class="row">
         <div class="col-lg-offset-2 col-lg-8">
-          
+          <h2 class="netHead" id="name"></h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <img id="profileImg">
+            </div>
+            <div class="col-lg-6">
+              <div class="input-group">
+                <input type="text" id="name" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group">
+                <input type="text" id="location" class="form-control" placeholder="Location" aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+          <!-- End Row in a Row -->
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group">
+                <span class="input-group-addon">@</span>
+                <input type="text" id="twitter" class="form-control" placeholder="Twitter" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-linkedin-square"></i></span>
+                <input type="text" id="linkedin" class="form-control" placeholder="LinkedIn" aria-describedby="basic-addon3">
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-facebook-square"></i></span>
+                <input type="text" id="facebook" class="form-control" placeholder="Facebook" aria-describedby="basic-addon3">
+              </div>
+
+            </div>
+            <div class="col-lg-6">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                <input type="text" id="mobile" class="form-control" placeholder="Mobile" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+                <input type="text" id="email" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-desktop"></i></span>
+                <input type="text" id="website" class="form-control" placeholder="Website" aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
