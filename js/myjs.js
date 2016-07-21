@@ -134,6 +134,7 @@ function login() {
 };
 
 function submitProfile() {
+
 	firebase.database().ref('Users/' + uid).set({
 		photo: photo,
     	fullname: $("#fullname").val(),
@@ -154,13 +155,9 @@ function submitProfile() {
 
 $("#file").on("change", function(event) {
 	selectedFile = event.target.files[0];
-	$("#uploadButton").show();
-});
-
-function uploadPhoto() {
 	// Create a root reference
 	var filename = selectedFile.name;
-	var storageRef = firebase.storage().ref('/userImages/' + filename);
+	var storageRef = firebase.storage().ref('/userImages/' + uid);
 	var uploadTask = storageRef.put(selectedFile);
 
 	// Register three observers:
@@ -178,5 +175,4 @@ function uploadPhoto() {
 	  var downloadURL = uploadTask.snapshot.downloadURL;
 	  photo = downloadURL;
 	});
-
-}
+});
