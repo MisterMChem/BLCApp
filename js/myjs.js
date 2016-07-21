@@ -6,6 +6,7 @@ function userSignedIn(user) {
 	$("#loginContainer").hide();
 	$("#mainContainer").show();
 	console.log("signed in");
+	$("#profileImg").attr("src", user.photoURL);
 
 };
 
@@ -50,6 +51,7 @@ function login() {
 		  	// The firebase.auth.AuthCredential type that was used.
 		  	var credential = error.credential;
 		  	// ...
+		  	console.log(errorMessage);
 		});
 
 	}
