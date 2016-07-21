@@ -12,7 +12,7 @@ function getAttendees(){
     		var row = document.createElement("row");
     		$(row).addClass("row userBox");
     		var col1 = document.createElement("div");
-    		$(col).addClass("col-lg-3");
+    		$(col1).addClass("col-lg-3");
     		$(row).append(col1);
     		var col2 = document.createElement("div");
     		$(col2).addClass("col-lg-9");
