@@ -135,13 +135,13 @@ function login() {
 function submitProfile() {
 	firebase.database().ref('Users/' + uid).set({
 		photo: photo,
-    	fullname: fullname,
-    	email: email,
-    	twitter: twitter,
-    	facebook: facebook,
-    	linkedin: linkedin,
-    	website: website,
-    	mobile: mobile,
-    	loc: loc
+    	fullname: $("#fullname").val(),
+    	email: $("#email").val(),
+    	twitter: $("#twitter").val(),
+    	facebook: $("#facebook").val(),
+    	linkedin: $("#linkedin").val(),
+    	website: $("#website").val(),
+    	mobile: $("#mobile").val(),
+    	loc: $("#loc").val()
 	});
 }
