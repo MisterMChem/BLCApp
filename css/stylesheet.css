@@ -26,7 +26,10 @@
 	padding-bottom: 20px;
 	background-color: rgb(220, 220, 220);
 }
-
+.userBox {
+	margin-top: 5px;
+	border: 1px solid rgb(240, 240, 240);
+}
 .listPhoto {
 	width: 96%;
 	margin-left: 2%;
