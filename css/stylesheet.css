@@ -26,6 +26,9 @@
 	padding-bottom: 20px;
 	background-color: rgb(220, 220, 220);
 }
+#attendRow {
+    height:auto; overflow:auto
+}
 .userBox {
 	margin-top: 5px;
 	border: 1px solid rgb(240, 240, 240);
