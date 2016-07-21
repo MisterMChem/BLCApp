@@ -133,7 +133,7 @@ function login() {
 };
 
 function submitProfile() {
-	firebase.database().ref('Users/' + user.uid).set({
+	firebase.database().ref('Users/' + uid).set({
 		photo: photourl,
     	fullname: fullname,
     	email: email,
