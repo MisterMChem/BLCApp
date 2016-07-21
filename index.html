@@ -106,6 +106,9 @@
             </div>
           </div>
           <!-- End row in a row -->
+          <div class="alert alert-success" id="successAlert">
+            <strong>Success!</strong> Thanks for netwerking.
+          </div>
           <button type="button" class="btn btn-primary" id="submitButton" onclick="submitProfile();"><i class="fa fa-save"></i> SUBMIT</button>
         </div>
       </div>
@@ -121,6 +124,7 @@
 
 <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
 <script>
+  $(".alert").hide();
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyB4UCmZLWMMuIgIiTR85NoTcl4RhwDZxlo",
