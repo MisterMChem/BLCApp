@@ -26,3 +26,10 @@
 	padding-bottom: 20px;
 	background-color: rgb(220, 220, 220);
 }
+.listPhoto {
+	width: 96%;
+	margin-left: 2%;
+}
+.listDetail {
+	text-decoration: italic;
+}
