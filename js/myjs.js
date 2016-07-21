@@ -142,6 +142,6 @@ function submitProfile() {
     	linkedin: $("#linkedin").val(),
     	website: $("#website").val(),
     	mobile: $("#mobile").val(),
-    	loc: $("#loc").val()
+    	loc: $("#location").val()
 	});
 }
