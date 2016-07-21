@@ -30,7 +30,7 @@ function login() {
   		userSignedIn(user);
 	} else {
   		// No user is signed in.
-  		$(".container").hide();
+  		$("#mainContainer").hide();
   		$("#loginContainer").show();
   		firebase.auth().signInWithPopup(provider).then(function(result) {
 			// This gives you a Google Access Token. You can use it to access the Google API.
