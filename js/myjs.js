@@ -68,19 +68,20 @@ function userSignedIn(user) {
 	    		email = user.email;
 	    	}
 		}
+		$("#profileImg").attr("src", photo);
+		$("#name").val(fullname);
+		$("#location").val(loc);
+		$("#twitter").val(twitter);
+		$("#linkedin").val(linkedin);
+		$("#facebook").val(facebook);
+		$("#mobile").val(mobile);
+		$("#email").val(email);
+		$("#website").val(website);
 	});
 
 	$("#loginContainer").hide();
 	$("#mainContainer").show();
-	$("#profileImg").attr("src", photo);
-	$("#name").val(fullname);
-	$("#location").val(loc);
-	$("#twitter").val(twitter);
-	$("#linkedin").val(linkedin);
-	$("#facebook").val(facebook);
-	$("#mobile").val(mobile);
-	$("#email").val(email);
-	$("#website").val(website);
+
 
 };
 
