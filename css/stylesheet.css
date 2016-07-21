@@ -33,6 +33,8 @@
 	overflow:auto;
 	margin-top: 5px;
 	border: 1px solid rgb(240, 240, 240);
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 .listPhoto {
 	width: 96%;
