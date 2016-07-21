@@ -29,7 +29,13 @@ function getAttendees(){
     		detailText.innerHTML = currentUser.loc;
     		$(detailText).addClass("listDetail");
     		$(col2).append(detailText);
+    		var tw = document.createElement("p");
+    		tw.innerHTML = '<i class="fa fa-twitter"></i> ' + currentUser.twitter;
+    		$(tw).addClass("detailText");
+    		$(col2).append(tw);
+
     		$("#attendRow").append(row);
+
     	}
 
 
