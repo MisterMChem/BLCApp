@@ -69,7 +69,8 @@ function userSignedIn(user) {
 	    	}
 		}
 		$("#profileImg").attr("src", photo);
-		$("#name").val(fullname);
+		$("#name").html("Hello, " + fullname);
+		$("#fullname").val(fullname);
 		$("#location").val(loc);
 		$("#twitter").val(twitter);
 		$("#linkedin").val(linkedin);
