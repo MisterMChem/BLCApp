@@ -30,7 +30,7 @@ function getAttendees(){
     		$(detailText).addClass("listDetail");
     		$(col2).append(detailText);
     		var tw = document.createElement("p");
-    		tw.innerHTML = '<i class="fa fa-twitter"></i> ' + currentUser.twitter + ',  <i class="fa fa-facebook"></i> ' + currentUser.facebook + ',  <i class="fa fa-linkedin"></i> ' + currentUser.linkedin;
+    		tw.innerHTML = '<i class="fa fa-twitter"></i> ' + currentUser.twitter + ',  <a href="'+currentUser.facebook+'"><i class="fa fa-facebook"></i></a>,  <a href="'+currentUser.linkedin+'"><i class="fa fa-linkedin"></i></a>';
     		$(tw).addClass("detailText");
     		$(col2).append(tw);
 
