@@ -15,6 +15,7 @@ function checkLogin() {
 	if (user) {
 		userSignedIn(user);
 	} else {
+		$("#mainContainer").hide();
 
 	}
 
