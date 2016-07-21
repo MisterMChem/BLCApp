@@ -16,9 +16,13 @@
 }
 
 #row1 {
+	padding-top: 20px;
+	padding-bottom: 10px;
 	background-color: rgb(240, 240, 240);
 }
 
 #row2 {
+	padding-top: 10px;
+	padding-bottom: 20px;
 	background-color: rgb(220, 220, 220);
 }
