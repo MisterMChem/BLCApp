@@ -5,4 +5,10 @@
 }
 .input-group {
 	margin-top: 15px;
+	width: 100%;
+}
+
+#submitButton {
+	width: 50%;
+	margin-left: 25%;
 }
