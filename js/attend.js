@@ -9,7 +9,7 @@ function getAttendees(){
     	var currentUser;
     	for (var i = 0; i < keys.length; i++) {
     		var currentUser = UsersObject[keys[i]];
-    		var row = document.createElement("row");
+    		var row = document.createElement("div");
     		$(row).addClass("row userBox");
     		var col1 = document.createElement("div");
     		$(col1).addClass("col-lg-3");
