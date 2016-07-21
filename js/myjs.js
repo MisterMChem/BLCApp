@@ -1,12 +1,75 @@
 $( document ).ready(function() {
 	checkLogin();
 });
+var uid = "";
+var photo = "";
+var fullname = "";
+var email = "";
+var twitter, linkedin, facebook, mobile, loc, website = "";
 
 function userSignedIn(user) {
+	uid = user.uid;
+
+    firebase.database().ref('Users/' + uid).once('value').then(function(snapshot) {
+    	var data = snapshot.val();
+    	//photo
+    	if (data.photourl) {
+    		photo = data.photourl;
+    	} else if (user.photoURL) {
+    		photo = user.photoURL;
+    	}
+    	//name
+    	if (data.fullname) {
+    		fullname = data.fullname; 
+    	} else if (user.displayName) {
+    		fullname = user.displayName;
+    	}
+    	//email
+    	if (data.email) {
+    		email = data.email;
+    	} else if (user.email) {
+    		email = user.email;
+    	}
+    	//twitter
+    	if (data.twitter) {
+    		twitter = data.twitter;
+    	}
+    	//linkedin
+    	if (data.linkedin) {
+    		linkedin = data.linkedin;
+    	}
+    	//facebook
+    	if (data.facebook) {
+    		facebook = data.facebook;
+    	}
+    	//mobile
+    	if (data.mobile) {
+    		mobile = data.mobile;
+    	}
+    	//location
+    	if (data.loc) {
+    		loc = data.loc;
+    	}
+    	//website
+    	if (data.website) {
+    		website = data.website;
+    	}
+
+  		var username = snapshot.val().username;
+	});
+
 	$("#loginContainer").hide();
 	$("#mainContainer").show();
 	console.log("signed in");
-	$("#profileImg").attr("src", user.photoURL);
+	$("#profileImg").attr("src", photo);
+	$("#name").val(fullname);
+	$("#location").val(loc);
+	$("#twitter").val(twitter);
+	$("#linkedin").val(linkedin);
+	$("#facebook").val(facebook);
+	$("#mobile").val(mobile);
+	$("#email").val(email);
+	$("#website").val(website);
 
 };
 
@@ -57,3 +120,17 @@ function login() {
 	}
 
 };
+
+function submitProfile() {
+	firebase.database().ref('Users/' + user.uid).set({
+		photo: photourl,
+    	fullname: fullname,
+    	email: email,
+    	twitter: twitter,
+    	facebook: facebook,
+    	linkedin: linkedin,
+    	website: website,
+    	mobile: mobile,
+    	loc: loc
+	});
+}
