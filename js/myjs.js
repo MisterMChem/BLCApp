@@ -7,7 +7,11 @@ var photo = "";
 var fullname = "";
 var email = "";
 var twitter = "";
-var linkedin, facebook, mobile, loc, website = "";
+var linkedin = "";
+var facebook = "";
+var mobile = "";
+var loc = "";
+var website = "";
 
 function userSignedIn(user) {
 	uid = user.uid;
