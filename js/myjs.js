@@ -6,7 +6,8 @@ var uid = "";
 var photo = "";
 var fullname = "";
 var email = "";
-var twitter, linkedin, facebook, mobile, loc, website = "";
+var twitter = "";
+var linkedin, facebook, mobile, loc, website = "";
 
 function userSignedIn(user) {
 	uid = user.uid;
